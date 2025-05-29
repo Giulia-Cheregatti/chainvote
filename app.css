@@ -1,206 +1,241 @@
 /* Index */
 .hero {
-  background: linear-gradient(135deg, #2b2e4a, #4b3f72); /* Web3-inspired gradient */
-  color: #ffffff;
+  background: linear-gradient(135deg, var(--primary), #3b82f6); /* Gradiente vibrante, mas controlado */
+  color: var(--text-primary);
   text-align: center;
-  padding: 4rem 0;
+  padding: 6rem 0;
   border-radius: 0 0 16px 16px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
 }
 
 .hero h1 {
-  font-size: 2.5rem;
+  font-size: var(--font-size-2xl);
   font-weight: 700;
-  margin-bottom: 1rem;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  margin-bottom: var(--spacing-md);
+  letter-spacing: -0.03em;
 }
 
 .hero p {
-  font-size: 1.25rem;
-  margin-bottom: 1.5rem;
-  opacity: 0.9;
+  font-size: var(--font-size-lg);
+  margin-bottom: var(--spacing-lg);
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0.95;
 }
 
 .cta-buttons {
   display: flex;
-  gap: 1rem;
+  gap: var(--spacing-md);
   justify-content: center;
   flex-wrap: wrap;
 }
 
 #como-funciona {
-  background: rgba(255, 255, 255, 0.05); /* Subtle glassmorphism */
-  backdrop-filter: blur(10px);
-  border-radius: 12px;
-  padding: 2rem;
-  margin: 2rem 0;
+  background: var(--surface);
+  border-radius: 16px;
+  padding: var(--spacing-xl);
+  margin: var(--spacing-lg) 0;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
 }
 
 #como-funciona h2 {
-  font-size: 2rem;
+  font-size: var(--font-size-2xl);
   font-weight: 700;
   text-align: center;
-  margin-bottom: 2rem;
-  color: #ffffff;
+  margin-bottom: var(--spacing-xl);
+  color: var(--text-primary);
 }
 
 .steps {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: var(--spacing-lg);
 }
 
 .step {
   text-align: center;
-  background: rgba(255, 255, 255, 0.1);
-  padding: 1.5rem;
+  background: var(--surface);
+  padding: var(--spacing-lg);
   border-radius: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid var(--border);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
 }
 
 .step:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.4);
+  box-shadow: 0 4px 16px rgba(79, 70, 229, 0.2);
+  transform: translateY(-3px);
 }
 
 .step h3 {
-  font-size: 1.25rem;
+  font-size: var(--font-size-xl);
   font-weight: 600;
-  color: #ffffff;
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-sm);
+}
+
+.step p {
+  font-size: var(--font-size-base);
+  color: var(--text-secondary);
 }
 
 /* Cadastro de DAOs e Usuários */
 section h2 {
-  font-size: 2rem;
+  font-size: var(--font-size-2xl);
   font-weight: 700;
   text-align: center;
-  margin-bottom: 2rem;
-  color: #ffffff;
+  margin-bottom: var(--spacing-xl);
+  color: var(--text-primary);
 }
 
 #feedback {
   text-align: center;
-  margin-top: 1rem;
-  color: #a5b4fc;
+  margin-top: var(--spacing-md);
+  color: var(--accent);
+  font-weight: 500;
+  font-size: var(--font-size-base);
 }
 
 #public-daos {
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  padding: 1rem;
+  border: 1px solid var(--border);
+  padding: var(--spacing-lg);
   border-radius: 12px;
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(10px);
+  background: var(--surface);
 }
 
 .dao-item {
-  margin-bottom: 1rem;
-  padding: 1rem;
-  border-radius: 8px;
-  background: rgba(255, 255, 255, 0.1);
-  transition: transform 0.3s ease;
+  margin-bottom: var(--spacing-md);
+  padding: var(--spacing-md);
+  border-radius: 10px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  transition: box-shadow 0.2s ease;
 }
 
 .dao-item:hover {
-  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.15);
+}
+
+.dao-item p {
+  margin-bottom: var(--spacing-sm);
+  color: var(--text-secondary);
+}
+
+.dao-item button {
+  width: 100%;
 }
 
 /* Gerenciar DAO */
 section p a {
-  color: #a5b4fc;
+  color: var(--accent);
   text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
 }
 
 section p a:hover {
-  color: #ffffff;
+  color: var(--text-primary);
 }
 
 .admin-actions {
-  margin: 2rem 0;
-  background: rgba(255, 255, 255, 0.05);
-  padding: 1.5rem;
+  margin: var(--spacing-xl) 0;
+  background: var(--surface);
+  padding: var(--spacing-lg);
   border-radius: 12px;
+  border: 1px solid var(--border);
 }
 
 .admin-actions h3 {
-  font-size: 1.5rem;
+  font-size: var(--font-size-xl);
   font-weight: 600;
-  color: #ffffff;
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-md);
 }
 
 .action-buttons {
   display: flex;
-  gap: 1rem;
+  gap: var(--spacing-md);
   flex-wrap: wrap;
 }
 
 table {
   width: 100%;
-  border-collapse: collapse;
-  background: rgba(255, 255, 255, 0.05);
+  border-collapse: separate;
+  border-spacing: 0;
+  background: var(--surface);
   border-radius: 12px;
   overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
 }
 
 table th, table td {
-  padding: 0.75rem;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: var(--spacing-md);
+  border: 1px solid var(--border);
   text-align: left;
 }
 
 table thead {
-  background: linear-gradient(45deg, #4b3f72, #2b2e4a);
+  background: var(--primary-dark);
 }
 
 table th {
-  color: #ffffff;
+  color: var(--text-primary);
   font-weight: 600;
+  font-size: var(--font-size-base);
 }
 
 table td {
-  color: #e0e0e0;
+  color: var(--text-secondary);
+  font-size: var(--font-size-sm);
 }
 
 /* Criar Proposta */
 #vote-options {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: var(--spacing-sm);
+}
+
+#vote-options input {
+  margin-bottom: var(--spacing-sm);
 }
 
 /* Votação */
 .vote-options {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: var(--spacing-sm);
 }
 
 .vote-options label {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
-  color: #e0e0e0;
+  gap: var(--spacing-sm);
+  color: var(--text-secondary);
+  font-weight: 500;
 }
 
 /* Resultados */
 section h3 {
-  font-size: 1.5rem;
+  font-size: var(--font-size-xl);
   font-weight: 600;
-  margin: 1rem 0;
-  color: #ffffff;
+  margin: var(--spacing-md) 0;
+  color: var(--text-primary);
 }
 
 /* Perfil */
 section ul {
   list-style: none;
-  margin: 1rem 0;
+  margin: var(--spacing-md) 0;
 }
 
 section ul li a {
-  color: #a5b4fc;
+  color: var(--accent);
   text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
 }
 
 section ul li a:hover {
-  color: #ffffff;
+  color: var(--text-primary);
 }

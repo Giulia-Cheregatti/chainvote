@@ -1,4 +1,29 @@
 /* Estilos globais para o ChainVote */
+:root {
+  /* Cores */
+  --primary: #4f46e5; /* Azul índigo principal */
+  --primary-dark: #4338ca; /* Azul escuro para hover */
+  --secondary: #6b7280; /* Cinza para botões secundários */
+  --secondary-dark: #4b5563;
+  --background: #111827; /* Fundo escuro profissional */
+  --surface: rgba(255, 255, 255, 0.05); /* Superfície para glassmorphism */
+  --border: rgba(255, 255, 255, 0.15);
+  --text-primary: #f1f5f9; /* Texto principal */
+  --text-secondary: #cbd5e1; /* Texto secundário */
+  --accent: #a5b4fc; /* Acento para links e destaques */
+  /* Espaçamentos */
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  /* Tamanhos de fonte */
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.25rem;
+  --font-size-xl: 1.5rem;
+  --font-size-2xl: 2.25rem;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -8,10 +33,12 @@
 
 html, body {
   height: 100%;
-  background: linear-gradient(135deg, #1a1b26 0%, #2a2b3a 100%); /* Dark gradient for Web3 aesthetic */
-  color: #e0e0e0;
+  background: var(--background);
+  color: var(--text-primary);
   display: flex;
   flex-direction: column;
+  font-size: var(--font-size-base);
+  line-height: 1.6;
 }
 
 body > * {
@@ -19,138 +46,171 @@ body > * {
 }
 
 main {
-  flex: 1 0 auto; /* Ensures main content pushes footer down */
+  flex: 1 0 auto; /* Garante footer fixo no final */
 }
 
 header {
-  background: linear-gradient(90deg, #2b2e4a, #3a3f66); /* Subtle gradient for header */
-  color: #ffffff;
-  padding: 1rem;
+  background: var(--primary);
+  color: var(--text-primary);
+  padding: var(--spacing-lg);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 header img {
-  height: 40px;
-  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+  height: 50px;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.3));
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-lg);
 }
 
 nav a {
-  color: #a5b4fc;
-  margin-left: 1rem;
+  color: var(--text-secondary);
   text-decoration: none;
-  transition: color 0.3s ease;
+  font-weight: 500;
+  font-size: var(--font-size-base);
+  transition: color 0.2s ease, transform 0.2s ease;
 }
 
 nav a:hover {
-  color: #ffffff;
-  text-decoration: underline;
+  color: var(--text-primary);
+  transform: translateY(-1px);
 }
 
 .btn {
-  background: linear-gradient(45deg, #6366f1, #a855f7); /* Vibrant Web3 gradient */
-  color: #ffffff;
-  padding: 0.75rem 1.5rem;
+  background: var(--primary);
+  color: var(--text-primary);
+  padding: var(--spacing-sm) var(--spacing-lg);
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  font-size: 1rem;
+  font-size: var(--font-size-base);
   font-weight: 600;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .btn:hover {
+  background: var(--primary-dark);
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.4);
+  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.2);
 }
 
 .btn-secondary {
-  background: linear-gradient(45deg, #4b5563, #6b7280);
+  background: var(--secondary);
 }
 
 .btn-secondary:hover {
-  background: linear-gradient(45deg, #374151, #4b5563);
-  box-shadow: 0 4px 12px rgba(75, 85, 99, 0.4);
+  background: var(--secondary-dark);
+  box-shadow: 0 4px 12px rgba(107, 114, 128, 0.2);
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1280px;
   margin: 0 auto;
-  padding: 1rem;
+  padding: var(--spacing-xl);
 }
 
 section {
-  padding: 2rem 0;
+  padding: var(--spacing-xl) 0;
 }
 
 form {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
-  max-width: 600px;
+  gap: var(--spacing-md);
+  max-width: 720px;
   margin: 0 auto;
-  background: rgba(255, 255, 255, 0.05); /* Glassmorphism effect */
-  padding: 1.5rem;
+  background: var(--surface);
+  padding: var(--spacing-lg);
   border-radius: 12px;
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--border);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
 }
 
 input, textarea, select {
-  padding: 0.75rem;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: var(--spacing-sm);
+  border: 1px solid var(--border);
   border-radius: 8px;
-  font-size: 1rem;
-  background: rgba(255, 255, 255, 0.1);
-  color: #e0e0e0;
-  transition: border-color 0.3s ease;
+  font-size: var(--font-size-base);
+  background: var(--surface);
+  color: var(--text-primary);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 input:focus, textarea:focus, select:focus {
   outline: none;
-  border-color: #6366f1;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.15);
 }
 
 textarea {
   resize: vertical;
+  min-height: 120px;
 }
 
 footer {
-  background: linear-gradient(90deg, #2b2e4a, #3a3f66);
-  color: #a5b4fc;
+  background: var(--primary);
+  color: var(--text-secondary);
   text-align: center;
-  padding: 1rem;
+  padding: var(--spacing-lg);
   flex-shrink: 0;
   width: 100%;
-  box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.2);
+  border-top: 1px solid var(--border);
 }
 
 footer a {
-  color: #a5b4fc;
+  color: var(--accent);
   text-decoration: none;
-  transition: color 0.3s ease;
+  font-weight: 500;
+  transition: color 0.2s ease;
 }
 
 footer a:hover {
-  color: #ffffff;
+  color: var(--text-primary);
 }
 
 @media (max-width: 768px) {
+  html, body {
+    font-size: var(--font-size-sm);
+  }
+
   header {
     flex-direction: column;
-    gap: 1rem;
+    gap: var(--spacing-md);
+    padding: var(--spacing-md);
   }
 
   nav {
-    display: flex;
     flex-direction: column;
-    gap: 0.5rem;
+    gap: var(--spacing-sm);
     align-items: center;
+  }
+
+  .container {
+    padding: var(--spacing-md);
   }
 
   .btn {
     width: 100%;
+    padding: var(--spacing-sm);
+  }
+
+  form {
+    padding: var(--spacing-md);
+  }
+
+  section {
+    padding: var(--spacing-lg) 0;
   }
 }
