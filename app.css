@@ -1,20 +1,24 @@
 /* Index */
 .hero {
-  background-color: #1E3A8A;
-  color: #FFFFFF;
+  background: linear-gradient(135deg, #2b2e4a, #4b3f72); /* Web3-inspired gradient */
+  color: #ffffff;
   text-align: center;
   padding: 4rem 0;
+  border-radius: 0 0 16px 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
 .hero h1 {
   font-size: 2.5rem;
-  font-weight: bold;
+  font-weight: 700;
   margin-bottom: 1rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .hero p {
   font-size: 1.25rem;
   margin-bottom: 1.5rem;
+  opacity: 0.9;
 }
 
 .cta-buttons {
@@ -25,14 +29,19 @@
 }
 
 #como-funciona {
-  background-color: #FFFFFF;
+  background: rgba(255, 255, 255, 0.05); /* Subtle glassmorphism */
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  padding: 2rem;
+  margin: 2rem 0;
 }
 
 #como-funciona h2 {
   font-size: 2rem;
-  font-weight: bold;
+  font-weight: 700;
   text-align: center;
   margin-bottom: 2rem;
+  color: #ffffff;
 }
 
 .steps {
@@ -43,48 +52,80 @@
 
 .step {
   text-align: center;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.step:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.4);
 }
 
 .step h3 {
   font-size: 1.25rem;
-  font-weight: bold;
+  font-weight: 600;
+  color: #ffffff;
 }
 
 /* Cadastro de DAOs e Usuários */
 section h2 {
   font-size: 2rem;
-  font-weight: bold;
+  font-weight: 700;
   text-align: center;
   margin-bottom: 2rem;
+  color: #ffffff;
 }
 
 #feedback {
   text-align: center;
   margin-top: 1rem;
+  color: #a5b4fc;
 }
 
 #public-daos {
-  border: 1px solid #D1D5DB;
+  border: 1px solid rgba(255, 255, 255, 0.2);
   padding: 1rem;
-  border-radius: 4px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
 }
 
 .dao-item {
   margin-bottom: 1rem;
+  padding: 1rem;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.dao-item:hover {
+  transform: translateY(-3px);
 }
 
 /* Gerenciar DAO */
 section p a {
-  color: #1E3A8A;
+  color: #a5b4fc;
+  text-decoration: none;
+}
+
+section p a:hover {
+  color: #ffffff;
 }
 
 .admin-actions {
   margin: 2rem 0;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 1.5rem;
+  border-radius: 12px;
 }
 
 .admin-actions h3 {
   font-size: 1.5rem;
-  font-weight: bold;
+  font-weight: 600;
+  color: #ffffff;
 }
 
 .action-buttons {
@@ -96,15 +137,28 @@ section p a {
 table {
   width: 100%;
   border-collapse: collapse;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  overflow: hidden;
 }
 
 table th, table td {
-  padding: 0.5rem;
-  border: 1px solid #D1D5DB;
+  padding: 0.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  text-align: left;
 }
 
 table thead {
-  background-color: #E5E7EB;
+  background: linear-gradient(45deg, #4b3f72, #2b2e4a);
+}
+
+table th {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+table td {
+  color: #e0e0e0;
 }
 
 /* Criar Proposta */
@@ -121,11 +175,19 @@ table thead {
   gap: 0.5rem;
 }
 
+.vote-options label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #e0e0e0;
+}
+
 /* Resultados */
 section h3 {
   font-size: 1.5rem;
-  font-weight: bold;
+  font-weight: 600;
   margin: 1rem 0;
+  color: #ffffff;
 }
 
 /* Perfil */
@@ -135,5 +197,10 @@ section ul {
 }
 
 section ul li a {
-  color: #1E3A8A;
+  color: #a5b4fc;
+  text-decoration: none;
+}
+
+section ul li a:hover {
+  color: #ffffff;
 }

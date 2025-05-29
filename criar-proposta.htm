@@ -6,6 +6,7 @@
   <title>Criar Proposta - ChainVote</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="app.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap">
   <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
   <script src="app.js" defer></script>
 </head>
@@ -18,39 +19,41 @@
     </nav>
   </header>
 
-  <section>
-    <div class="container">
-      <h2>Criar Proposta</h2>
-      <form id="proposal-form">
-        <label for="proposal-title">Título:</label>
-        <input type="text" id="proposal-title" maxlength="100" required>
-        
-        <label for="proposal-description">Descrição:</label>
-        <textarea id="proposal-description" maxlength="1000" rows="6" required></textarea>
-        
-        <label for="vote-options">Opções de Voto:</label>
-        <div id="vote-options">
-          <input type="text" placeholder="Opção 1" required>
-          <input type="text" placeholder="Opção 2" required>
-          <button type="button" id="add-option" class="btn">Adicionar Opção</button>
-        </div>
-        
-        <label for="vote-period">Período de Votação:</label>
-        <select id="vote-period" required>
-          <option value="24">24 horas</option>
-          <option value="72">3 dias</option>
-          <option value="168">7 dias</option>
-        </select>
-        
-        <label>
-          <input type="checkbox" id="vote-visibility"> Votação Pública
-        </label>
-        
-        <button type="submit" class="btn">Criar Proposta</button>
-      </form>
-      <p id="feedback"></p>
-    </div>
-  </section>
+  <main>
+    <section>
+      <div class="container">
+        <h2>Criar Proposta</h2>
+        <form id="proposal-form">
+          <label for="proposal-title">Título:</label>
+          <input type="text" id="proposal-title" maxlength="100" required>
+          
+          <label for="proposal-description">Descrição:</label>
+          <textarea id="proposal-description" maxlength="1000" rows="6" required></textarea>
+          
+          <label for="vote-options">Opções de Voto:</label>
+          <div id="vote-options">
+            <input type="text" placeholder="Opção 1" required>
+            <input type="text" placeholder="Opção 2" required>
+            <button type="button" id="add-option" class="btn">Adicionar Opção</button>
+          </div>
+          
+          <label for="vote-period">Período de Votação:</label>
+          <select id="vote-period" required>
+            <option value="24">24 horas</option>
+            <option value="72">3 dias</option>
+            <option value="168">7 dias</option>
+          </select>
+          
+          <label>
+            <input type="checkbox" id="vote-visibility"> Votação Pública
+          </label>
+          
+          <button type="submit" class="btn">Criar Proposta</button>
+        </form>
+        <p id="feedback"></p>
+      </div>
+    </section>
+  </main>
 
   <footer>
     <p><a href="#docs">Documentação</a> | <a href="#suporte">Suporte</a></p>
