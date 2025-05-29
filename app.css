@@ -1,0 +1,139 @@
+/* Index */
+.hero {
+  background-color: #1E3A8A;
+  color: #FFFFFF;
+  text-align: center;
+  padding: 4rem 0;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+#como-funciona {
+  background-color: #FFFFFF;
+}
+
+#como-funciona h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+}
+
+.step {
+  text-align: center;
+}
+
+.step h3 {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+/* Cadastro de DAOs e Usuários */
+section h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+#feedback {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+#public-daos {
+  border: 1px solid #D1D5DB;
+  padding: 1rem;
+  border-radius: 4px;
+}
+
+.dao-item {
+  margin-bottom: 1rem;
+}
+
+/* Gerenciar DAO */
+section p a {
+  color: #1E3A8A;
+}
+
+.admin-actions {
+  margin: 2rem 0;
+}
+
+.admin-actions h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table th, table td {
+  padding: 0.5rem;
+  border: 1px solid #D1D5DB;
+}
+
+table thead {
+  background-color: #E5E7EB;
+}
+
+/* Criar Proposta */
+#vote-options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* Votação */
+.vote-options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* Resultados */
+section h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 1rem 0;
+}
+
+/* Perfil */
+section ul {
+  list-style: none;
+  margin: 1rem 0;
+}
+
+section ul li a {
+  color: #1E3A8A;
+}

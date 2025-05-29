@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastrar Usuário - ChainVote</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="app.css">
+  <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header>
+    <img src="logo.png" alt="ChainVote Logo">
+    <nav>
+      <a href="index.html">Voltar</a>
+      <button id="connect-wallet" class="btn">Conectar Carteira</button>
+    </nav>
+  </header>
+
+  <section>
+    <div class="container">
+      <h2>Cadastrar Usuário</h2>
+      <form id="user-form">
+        <label for="user-address">Endereço da Carteira:</label>
+        <input type="text" id="user-address" readonly>
+        
+        <label for="display-name">Nome de Exibição (opcional):</label>
+        <input type="text" id="display-name" maxlength="30">
+        
+        <label for="invite-code">Código de Convite (para DAOs privadas):</label>
+        <input type="text" id="invite-code">
+        
+        <label>DAOs Públicas Disponíveis:</label>
+        <div id="public-daos">
+          <div class="dao-item">
+            <p><strong>DAO Exemplo</strong>: Comunidade de governança descentralizada</p>
+            <button type="button" class="btn">Participar</button>
+          </div>
+        </div>
+        
+        <button type="submit" class="btn">Confirmar Cadastro</button>
+      </form>
+      <p id="feedback"></p>
+    </div>
+  </section>
+
+  <footer>
+    <p><a href="#docs">Documentação</a> | <a href="#suporte">Suporte</a></p>
+  </footer>
+</body>
+</html>

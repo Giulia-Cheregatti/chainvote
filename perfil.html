@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perfil do Usuário - ChainVote</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="app.css">
+  <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header>
+    <img src="logo.png" alt="ChainVote Logo">
+    <nav>
+      <a href="index.html">Voltar</a>
+      <button id="connect-wallet" class="btn">Conectar Carteira</button>
+    </nav>
+  </header>
+
+  <section>
+    <div class="container">
+      <h2>Perfil do Usuário</h2>
+      <p><strong>Endereço:</strong> 0x123...abc</p>
+      <p><strong>Nome de Exibição:</strong> Usuário Exemplo</p>
+      <p><strong>Saldo de cTokens:</strong> 10 cTokens</p>
+      
+      <h3>DAOs Associadas</h3>
+      <ul>
+        <li><a href="gerenciar-dao.html">Exemplo DAO</a></li>
+      </ul>
+      
+      <h3>Histórico de Votos</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Proposta</th>
+            <th>DAO</th>
+            <th>Data</th>
+            <th>Opção</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Aprovar Orçamento</td>
+            <td>Exemplo DAO</td>
+            <td>27/05/2025</td>
+            <td>Sim</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <footer>
+    <p><a href="#docs">Documentação</a> | <a href="#suporte">Suporte</a></p>
+  </footer>
+</body>
+</html>

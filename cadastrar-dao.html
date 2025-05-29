@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastrar DAO - ChainVote</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="app.css">
+  <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header>
+    <img src="logo.png" alt="ChainVote Logo">
+    <nav>
+      <a href="index.html">Voltar</a>
+      <button id="connect-wallet" class="btn">Conectar Carteira</button>
+    </nav>
+  </header>
+
+  <section>
+    <div class="container">
+      <h2>Cadastrar uma DAO</h2>
+      <form id="dao-form">
+        <label for="dao-name">Nome da DAO:</label>
+        <input type="text" id="dao-name" maxlength="50" required>
+        
+        <label for="dao-description">Descrição:</label>
+        <textarea id="dao-description" maxlength="500" rows="4" required></textarea>
+        
+        <label for="dao-type">Tipo de Organização:</label>
+        <select id="dao-type" required>
+          <option value="">Selecione</option>
+          <option value="dao">DAO</option>
+          <option value="community">Comunidade</option>
+          <option value="ong">ONG</option>
+          <option value="cooperative">Cooperativa</option>
+        </select>
+        
+        <label for="propose-rule">Quem pode propor votações?</label>
+        <select id="propose-rule" required>
+          <option value="admin">Apenas Administrador</option>
+          <option value="authorized">Membros Autorizados</option>
+          <option value="all">Todos os Membros</option>
+        </select>
+        
+        <label for="vote-rule">Quem pode votar?</label>
+        <select id="vote-rule" required>
+          <option value="all">Todos os Membros</option>
+          <option value="token-holders">Apenas Membros com cTokens</option>
+        </select>
+        
+        <label for="vote-period">Período Mínimo de Votação:</label>
+        <select id="vote-period" required>
+          <option value="24">24 horas</option>
+          <option value="72">3 dias</option>
+          <option value="168">7 dias</option>
+        </select>
+        
+        <label>
+          <input type="checkbox" id="dao-visibility"> DAO Pública
+        </label>
+        
+        <label for="admin-address">Endereço da Carteira:</label>
+        <input type="text" id="admin-address" readonly>
+        
+        <button type="submit" class="btn">Criar DAO</button>
+      </form>
+      <p id="feedback"></p>
+    </div>
+  </section>
+
+  <footer>
+    <p><a href="#docs">Documentação</a> | <a href="#suporte">Suporte</a></p>
+  </footer>
+</body>
+</html>

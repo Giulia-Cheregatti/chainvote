@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Votar - ChainVote</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="app.css">
+  <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header>
+    <img src="logo.png" alt="ChainVote Logo">
+    <nav>
+      <a href="gerenciar-dao.html">Voltar</a>
+      <button id="connect-wallet" class="btn">Conectar Carteira</button>
+    </nav>
+  </header>
+
+  <section>
+    <div class="container">
+      <h2>Votar: Aprovar Orçamento</h2>
+      <p><strong>Descrição:</strong> Proposta para aprovar o orçamento anual da DAO.</p>
+      <p><strong>Prazo Restante:</strong> 2 dias</p>
+      
+      <form id="vote-form">
+        <label>Escolha sua opção:</label>
+        <div class="vote-options">
+          <label><input type="radio" name="vote" value="sim" required> Sim</label>
+          <label><input type="radio" name="vote" value="nao"> Não</label>
+        </div>
+        
+        <label>
+          <input type="checkbox" id="anonymous-vote"> Voto Anônimo (se disponível)
+        </label>
+        
+        <button type="submit" class="btn">Votar</button>
+      </form>
+      <p id="feedback"></p>
+    </div>
+  </section>
+
+  <footer>
+    <p><a href="#docs">Documentação</a> | <a href="#suporte">Suporte</a></p>
+  </footer>
+</body>
+</html>
